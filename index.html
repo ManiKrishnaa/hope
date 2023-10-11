@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HOPE </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="block1">
+            <div id="heading">
+                <h1> HOPE </h1>
+                <nav>
+                    <a href="https://www.instagram.com/"><img src="insta_icon.jpg" alt="insta-icon"></a>
+                    <a href="#"><img src="facebook_icon.jpg" alt="facebook_icon"></a>
+                    <a href="#"><img src="twitter_icon.png" alt="insta-icon"></a>
+                    <a href="#"><img src="youtube_icon.png" alt="insta-icon"></a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="block2">
+            <div class="slider" id="imageSlider"></div>
+        </div>
+    
+        <div class="block3">
+            <p id="dynamicText"> hello this is our webpage  </p>
+        </div>
+    </div>
+    <script>
+        const slider = document.getElementById('imageSlider');
+        const dynamicText = document.getElementById('dynamicText');
+
+        const images = [
+            'image1.jpg',
+            'image2.jpg',
+            'image3.jpg',
+        ];
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const imageUrl = images[index];
+            const slideHTML = `<div class="slide active"><img src="${imageUrl}" alt="Image ${index + 1}"></div>`;
+            slider.innerHTML = slideHTML;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex);
+
+        setInterval(nextSlide, 3000);  
+    </script>
+</body>
+</html>

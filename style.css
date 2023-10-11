@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.block1 {
+    text-align: right;
+    background-color: white;
+    padding: 10px;
+    color: #3498db;
+}
+
+#heading {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #3498db;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+nav img {
+    width: 30px; 
+    height: 30px; 
+    margin-left: 10px;
+}
+
+.block2 {
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    padding-top: 20px;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
